@@ -1,0 +1,22 @@
+{% load static tailwind_tags %}
+{% comment %} {% load static %} {% endcomment %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}
+        chai app 
+        {% endblock %}
+    </title>
+    {% comment %} <link rel="stylesheet"href= {% static "style.css" %}   {% endcomment %}
+    {% tailwind_css %}
+</head>
+<body class = 'bg-blue-800 text-white' >
+    <nav >This is nav bar </nav>
+    {% block content %}default{% endblock %} 
+    
+    
+</body>
+</html>
